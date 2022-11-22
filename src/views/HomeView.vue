@@ -5,7 +5,9 @@ import Button from "@/components/Button.vue";
 </script>
 
 <template>
-  <Card class="text-primary pt-20 pr-[72px] pb-[66px] pl-[198px]">
+  <Card
+    class="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-primary pt-20 pr-[72px] pb-[66px] pl-[198px]"
+  >
     <template #default>
       <HeadShot class="absolute top-[-25px] left-[-25px]" />
       <p>嗨，歡迎加入 FUFU 資訊，我是福福小精靈～</p>
