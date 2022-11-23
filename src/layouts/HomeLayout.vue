@@ -1,5 +1,4 @@
 <script setup>
-import Home from "@/views/HomeView.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 
@@ -10,7 +9,7 @@ import Footer from "@/components/Footer.vue";
       frameborder="0"
       class="w-screen h-screen"
     />
-    <Home v-if="false" />
+    <slot />
     <Footer class="absolute bottom-0" />
   </div>
 </template>
