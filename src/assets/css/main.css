@@ -5,3 +5,15 @@
 * {
   font-family: "Noto Sans Bold";
 }
+
+.bg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    #faeed6 0%,
+    #f8efda 20%,
+    #f3f3e7 30%,
+    #def6f8 100%
+  );
+}

@@ -7,6 +7,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "home" */ "../views/HomeView.vue"),
   },
+  {
+    path: "/role",
+    name: "role",
+    component: () =>
+      import(/* webpackChunkName: "role" */ "../views/RoleView.vue"),
+  },
 ];
 
 const router = createRouter({

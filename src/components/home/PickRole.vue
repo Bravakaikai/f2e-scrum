@@ -1,10 +1,13 @@
 <script setup>
 import { ref, inject } from "vue";
+import { useRouter } from "vue-router";
 import Card from "@/components/Card.vue";
 import HeadShot from "@/components/HeadShot.vue";
 import Button from "@/components/Button.vue";
 
 const { state } = inject("store");
+const router = useRouter();
+
 const roleList = ["bear", "frog", "rabbit"];
 const name = ref(null);
 
@@ -14,6 +17,8 @@ const goScrum = () => {
     alert("請輸入名字");
     return;
   }
+  state.name = name;
+  router.push({ name: "role" });
 };
 </script>
 
