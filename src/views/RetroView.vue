@@ -45,9 +45,9 @@ const checkList = ref([
 </script>
 
 <template>
-  <div class="bg relative pt-[112px] px-[258px] py-16 text-primary font-bold">
+  <div class="bg relative pt-[112px] px-24 py-16 text-primary font-bold">
     <Card
-      class="relative mx-auto py-10 pr-[60px] pl-[180px] w-4/5 text-primary"
+      class="relative mx-auto py-10 pr-[60px] pl-[180px] w-4/5 min-w-[760px] text-primary"
     >
       <template #default>
         <HeadShot class="cardHeadShot shadow" role-type="rabbit" />

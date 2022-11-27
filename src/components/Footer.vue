@@ -9,7 +9,7 @@ const getImageUrl = (name) => {
 </script>
 
 <template>
-  <div class="flex py-9 pl-[160px] w-full bg-white">
+  <div class="flex py-8 pl-[160px] w-full bg-white">
     <img
       v-for="(item, index) in imgList"
       :key="index"

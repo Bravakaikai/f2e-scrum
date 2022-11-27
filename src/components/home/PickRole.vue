@@ -46,7 +46,7 @@ const goScrum = () => {
           :key="index"
           :role-type="item"
           class="w-[200px] h-[200px]"
-          :class="state.role == item ? 'focus' : ''"
+          :class="state.role == item ? 'focus' : 'opacity-25'"
           clickable
           @click="setRole(item)"
         />

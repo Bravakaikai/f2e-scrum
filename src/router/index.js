@@ -46,6 +46,10 @@ const routes = [
     name: "end",
     component: () => import("../views/EndView.vue"),
   },
+   {
+    path: "/:pathMatch(.*)*",
+    component: () => import("../views/HomeView.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -6,7 +6,7 @@ const { state } = inject("store");
 
 <template>
   <div
-    class="border-b-[5px] border-solid border-white w-full h-7 bg-[#2E305A] flex"
+    class="border-b-[5px] border-solid border-white h-7 bg-[#2E305A] flex"
     :class="clickable ? 'clickable' : ''"
   >
     <div

@@ -23,6 +23,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <ProgressBar />
+  <ProgressBar class="min-w-[1200px]" />
   <router-view class="min-w-[1200px] min-h-[790px] overflow-scroll" />
 </template>

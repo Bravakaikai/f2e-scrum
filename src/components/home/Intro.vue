@@ -33,10 +33,12 @@ const introList = [
   <div
     class="absolute top-0 px-20 w-screen h-[calc(100vh-113px)] flex flex-col justify-center items-center"
   >
-    <Card class="relative py-10 pr-[60px] pl-[172px] w-2/3 text-primary">
+    <Card
+      class="relative py-10 pr-[60px] pl-[172px] w-2/3 min-w-[850px] text-primary"
+    >
       <template #default>
         <HeadShot
-          class="absolute top-[-6px] left-0 translate-x-[-50%] shadow"
+          class="absolute top-[-6px] left-0 translate-x-[-45%] shadow"
         />
         <div class="flex items-center">
           <p>

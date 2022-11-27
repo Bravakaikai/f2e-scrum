@@ -7,7 +7,7 @@ import Footer from "@/components/Footer.vue";
     <iframe
       src="https://my.spline.design/3dtextbluecopy-53a728fd223a810a8faa94eabbb7e829/"
       frameborder="0"
-      class="relative w-full h-[calc(100vh-28px)] min-h-[760px]"
+      class="relative w-full h-full min-h-[760px]"
     />
     <slot class="z-10" />
     <Footer class="absolute bottom-0 z-10" />
@@ -20,8 +20,8 @@ import Footer from "@/components/Footer.vue";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     90deg,
     rgba(30, 33, 88, 0.5) 0%,
