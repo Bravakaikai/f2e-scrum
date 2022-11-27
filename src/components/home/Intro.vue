@@ -31,7 +31,7 @@ const introList = [
 
 <template>
   <div
-    class="absolute top-[50px] px-20 w-screen h-[calc(100vh-113px)] flex flex-col justify-center items-center"
+    class="absolute top-0 px-20 w-screen h-[calc(100vh-113px)] flex flex-col justify-center items-center"
   >
     <Card class="relative py-10 pr-[60px] pl-[172px] w-2/3 text-primary">
       <template #default>

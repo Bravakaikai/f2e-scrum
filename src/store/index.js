@@ -68,12 +68,12 @@ const reset = () => {
     },
   ];
   sessionStorage.removeItem("backlog");
-  window.scrollTo(0, 0);
 };
 
 const nextStep = (val) => {
   if (state.step <= 10) {
     state.step = val;
+    window.scrollTo(0, 0);
     sessionStorage.setItem("step", state.step);
   }
 };

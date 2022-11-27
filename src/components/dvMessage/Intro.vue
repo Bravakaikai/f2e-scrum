@@ -28,6 +28,7 @@ const next = () => {
     emit("next");
   } else {
     step.value++;
+    window.scrollTo(0, 0);
   }
 };
 

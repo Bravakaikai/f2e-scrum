@@ -16,6 +16,7 @@ const next = () => {
   if (step.value == 2) {
     nextStep(1);
   }
+  window.scrollTo(0, 0);
 };
 </script>
 

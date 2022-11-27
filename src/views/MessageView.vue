@@ -14,9 +14,10 @@ const next = () => {
   if (step.value == messageList.length - 1) {
     router.push({ name: "sprintPlan" });
     nextStep(5);
-  } else {
-    step.value++;
+    return;
   }
+  step.value++;
+  window.scrollTo(0, 0);
 };
 
 const messageList = [
