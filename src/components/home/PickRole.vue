@@ -1,44 +1,54 @@
 <script setup>
-import { ref, inject } from "vue";
+import { ref, inject, onMounted } from "vue";
 import { useRouter } from "vue-router";
+import { roleList } from "@/assets/data/roleInfo";
 import Card from "@/components/Card.vue";
 import HeadShot from "@/components/HeadShot.vue";
 import Button from "@/components/Button.vue";
 
-const { state } = inject("store");
+const { state, setRole, setName, nextStep } = inject("store");
 const router = useRouter();
 
-const roleList = ["bear", "frog", "rabbit"];
 const name = ref(null);
+onMounted(() => {
+  name.value = state.name;
+});
 
-const pickRole = () => {};
 const goScrum = () => {
+  if (!state.role) {
+    alert("請選擇角色");
+    return;
+  }
   if (!name.value) {
     alert("請輸入名字");
     return;
   }
-  state.name = name;
+  setName(name.value);
+
   router.push({ name: "role" });
+  nextStep(2);
 };
 </script>
 
 <template>
   <Card
-    class="absolute top-[45%] left-1/2 translate-x-[-50%] translate-y-[-50%] px-[150px] pt-12 pb-20 text-center text-primary"
+    class="center px-[100px] pt-12 pb-10 w-[1000px] h-[520px] text-center text-primary"
   >
     <template #default>
       <p>
-        在這之前，我們一起變裝進入村里一起玩吧 !
-        <br />
         請選擇你喜歡的角色，並且告訴福福你的名字哦 ฅ •ﻌ• ฅ
+        <br />
+        完成後請按下「進村」按鈕，就可成功進入Scrum 新手村囉！
       </p>
-      <div class="flex my-9">
+      <div class="my-12 flex justify-between cursor-pointer">
         <HeadShot
           v-for="(item, index) in roleList"
           :key="index"
-          :roleType="item"
-          class="w-[150px] h-[150px]"
+          :role-type="item"
+          class="w-[200px] h-[200px]"
+          :class="state.role == item ? 'focus' : ''"
           clickable
+          @click="setRole(item)"
         />
       </div>
       <form>
@@ -53,7 +63,7 @@ const goScrum = () => {
       <Button
         class="absolute w-1/4 bottom-0 left-1/2 translate-x-[-50%] translate-y-[50%]"
         title="進村！"
-        @click="goScrum()"
+        @click="goScrum"
       />
     </template>
   </Card>

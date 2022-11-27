@@ -1,26 +1,25 @@
 <script setup>
-import { inject } from "vue";
 import Card from "@/components/Card.vue";
 import HeadShot from "@/components/HeadShot.vue";
 import Button from "@/components/Button.vue";
 
-const { state } = inject("store");
+const emit = defineEmits(["next"]);
 
 const introList = [
   {
     title: "Product Backlog",
     name: "產品待辦清單",
-    desc: "由產品負責人 ( PO ) 負責整理產品願景圖，並以產品代辦事項 ( Item ) 為單位排列優先順序。",
+    desc: "由產品負責人 (PO) 負責整理產品願景圖，並以產品代辦事項 (Item) 為單位排列優先順序。",
   },
   {
     title: "Sprint Planning",
     name: "短衝規劃會議",
-    desc: "每個短衝 ( Sprint ) 的起始，由全員共同參與討論交付到市場的目標。",
+    desc: "每個短衝 (Sprint) 的起始，由全員共同參與討論交付到市場的目標。",
   },
   {
     title: "Sprint Review",
     name: "短衝檢視會議",
-    desc: "藉由蒐集使用回饋和市場反應討論未來工作方向調整，向利害關係人 (Stakeholder)展示工作結果。",
+    desc: "藉由蒐集使用回饋和市場反應討論未來工作方向調整，向利害關係人 (Stakeholder) 展示工作結果。",
   },
   {
     title: "Sprint Retrospective",
@@ -32,23 +31,24 @@ const introList = [
 
 <template>
   <div
-    class="absolute top-0 px-20 w-screen h-[calc(100vh-113px)] flex flex-col justify-center items-center"
+    class="absolute top-[50px] px-20 w-screen h-[calc(100vh-113px)] flex flex-col justify-center items-center"
   >
     <Card class="relative py-10 pr-[60px] pl-[172px] w-2/3 text-primary">
       <template #default>
         <HeadShot
-          class="absolute top-[-6px] left-0 translate-x-[-25%]"
-          shadow
+          class="absolute top-[-6px] left-0 translate-x-[-50%] shadow"
         />
         <div class="flex items-center">
           <p>
-            福福貼心幫你排序好專有名詞了，等等應該會很常看到唷！<br />若沒問題，請接受此任務，成功通過
-            Scrum 新手村的挑戰吧！
+            福福貼心幫你排序好專有名詞了
+            <br />
+            若沒問題，請按下「接受挑戰」按鈕，迎接成功通過 Scrum
+            新手村的挑戰吧！
           </p>
           <Button
             class="ml-6 w-[220px]"
             title="接受挑戰"
-            @click="state.step = 3"
+            @click="emit('next')"
           />
         </div>
       </template>

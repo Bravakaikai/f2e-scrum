@@ -4,32 +4,47 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: () =>
-      import(/* webpackChunkName: "home" */ "../views/HomeView.vue"),
+    component: () => import("../views/HomeView.vue"),
   },
   {
     path: "/role",
     name: "role",
-    component: () =>
-      import(/* webpackChunkName: "role" */ "../views/RoleView.vue"),
+    component: () => import("../views/RoleView.vue"),
   },
   {
     path: "/productBacklog",
     name: "productBacklog",
-    component: () =>
-      import(/* webpackChunkName: "productBacklog" */ "../views/ProductBacklogView.vue"),
+    component: () => import("../views/ProductBacklogView.vue"),
   },
   {
     path: "/notify",
     name: "notify",
-    component: () =>
-      import(/* webpackChunkName: "notify" */ "../views/NotifyView.vue"),
+    component: () => import("../views/NotifyView.vue"),
   },
   {
     path: "/message",
     name: "message",
-    component: () =>
-      import(/* webpackChunkName: "message" */ "../views/MessageView.vue"),
+    component: () => import("../views/MessageView.vue"),
+  },
+  {
+    path: "/sprintPlan",
+    name: "sprintPlan",
+    component: () => import("../views/SprintPlanView.vue"),
+  },
+  {
+    path: "/dvMessage",
+    name: "dvMessage",
+    component: () => import("../views/DvMessageView.vue"),
+  },
+  {
+    path: "/retro",
+    name: "retro",
+    component: () => import("../views/RetroView.vue"),
+  },
+  {
+    path: "/end",
+    name: "end",
+    component: () => import("../views/EndView.vue"),
   },
 ];
 

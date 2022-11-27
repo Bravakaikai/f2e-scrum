@@ -1,12 +1,12 @@
 <script setup>
 import { inject, ref } from "vue";
 import { useRouter } from "vue-router";
-import { roleList, roleRef } from "@/assets/data/roleInfo";
+import { roleList, roleRef, introList } from "@/assets/data/roleInfo";
 import Button from "@/components/Button.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
-const { state } = inject("store");
+const { state, nextStep } = inject("store");
 const router = useRouter();
 
 const _swiper = document.getElementsByClassName("swiper");
@@ -15,41 +15,14 @@ const slidePrev = () => {
   _swiper[0].swiper.slidePrev();
   currentIndex.value = _swiper[0].swiper.activeIndex;
 };
-
 const slideNext = () => {
   _swiper[0].swiper.slideNext();
   currentIndex.value = _swiper[0].swiper.activeIndex;
 };
-
-const introList = [
-  {
-    title: "產品負責人",
-    subTitle: "PO，Product Owner",
-    amount: 1,
-    desc: "和SM一起排列「產品待辦清單 Product Backlog」，並釐清產品需求及願景。\n\n有權中斷或停止開發週期中的「衝刺 Sprint」。",
-    style: {
-      "--color": "#9c7548",
-    },
-  },
-  {
-    title: "( 我沒有中文翻譯 )",
-    subTitle: "SM，Scrum Master",
-    amount: 1,
-    desc: "和 PO 一起尋求最佳「產品待辦清單 Product Backlog」管理方式 找出能有效管理產品待辦列表的技巧。\n\n確保團隊中成員都充分了解 Scrum 並正確的實行。",
-    style: {
-      "--color": "#478AAF",
-    },
-  },
-  {
-    title: "開發團隊",
-    subTitle: "DT，Development Team",
-    amount: 6,
-    desc: "在PO訂下的產品優先順序下，決定領取多少點數並實作出產品，所有成員的頭銜均為產品開發者，不管他們做什麼工作，除此之外沒有任何頭銜，此規定沒有例外。",
-    style: {
-      "--color": "#7AB68F",
-    },
-  },
-];
+const nextPage = () => {
+  router.push({ name: "productBacklog" });
+  nextStep(3);
+};
 </script>
 
 <template>
@@ -79,14 +52,14 @@ const introList = [
           成員數量 x{{ introList[index].amount }}
         </div>
         <div
-          class="relative card border-8 border-solid rounded-[40px] h-[550px] overflow-hidden"
+          class="relative card border-8 border-solid rounded-[40px] h-[550px] overflow-hidden text-shadow"
           :class="isActive ? 'opacity-85' : 'scale-75 opacity-50'"
           :style="introList[index].style"
         >
           <div v-show="isActive" class="absolute bottom-10 w-full text-white">
             <p class="pl-6 font-bold text-2xl">{{ introList[index].title }}</p>
             <p
-              class="border-b border-solid border-white px-6 pb-4 font-bold text-[28px]"
+              class="border-b border-solid border-white px-6 pb-4 font-bold text-[28px] whitespace-pre-line"
             >
               {{ introList[index].subTitle }}
             </p>
@@ -101,7 +74,7 @@ const introList = [
             {{ introList[index].subTitle }}
           </p>
           <iframe
-            :src="roleRef[item]"
+            :src="roleRef[item].lg"
             frameborder="0"
             width="180%"
             height="180%"
@@ -113,23 +86,19 @@ const introList = [
         class="arrow"
         src="@/assets/svg/arrowLeft.svg"
         alt="Arrow Left"
-        @click="slidePrev()"
+        @click="slidePrev"
       />
       <img
         class="arrow right-0"
         src="@/assets/svg/arrowRight.svg"
         alt="Arrow Right"
-        @click="slideNext()"
+        @click="slideNext"
       />
     </swiper>
     <Button
       class="absolute left-[50%] translate-x-[-50%] translate-y-[-50%] w-1/5 z-10"
       :title="currentIndex == 2 ? '拜會完畢' : '下面一位'"
-      @click="
-        currentIndex == 2
-          ? router.push({ name: 'productBacklog' })
-          : slideNext()
-      "
+      @click="currentIndex == 2 ? nextPage() : slideNext()"
     />
   </div>
 </template>
@@ -138,6 +107,10 @@ const introList = [
 .card,
 .amount {
   border-color: var(--color);
+}
+.text-shadow {
+  text-shadow: 0 0 0.2em theme("colors.secondary"),
+    0 0 0.2em theme("colors.secondary");
 }
 .arrow {
   @apply absolute top-1/2 translate-y-[-50%] z-10 cursor-pointer;

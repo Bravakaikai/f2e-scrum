@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Button from "@/components/Button.vue";
 
@@ -9,11 +10,12 @@ defineProps({
 });
 
 const bgInfo = {
-  Jira: "https://my.spline.design/untitled-6ed34a87641b015d4f3a5c763ee4e175/",
+  Jira: "https://my.spline.design/jira-a71fefa0495a52f950558bbddc1c35f1/",
   Confluence:
-    "https://my.spline.design/untitled-0b994b13b55b1b2ffec16849dc1db985/",
+    "https://my.spline.design/untitledcopy-3d859facaaf0a83baf9d363d37f93952/",
 };
 
+const loading = ref(true);
 const router = useRouter();
 </script>
 
@@ -30,6 +32,24 @@ const router = useRouter();
         frameborder="0"
         width="140%"
         height="140%"
+        class="relative"
+        :class="loading ? '' : 'bg-transparent bg-none'"
+        @load="loading = false"
+      />
+      <img
+        src="@/assets/img/leftDialog.png"
+        alt="icon"
+        class="absolute top-1/3 left-1/3"
+      />
+      <img
+        src="@/assets/img/rightBlueDialog.png"
+        alt="icon"
+        class="absolute right-[30%]"
+      />
+      <img
+        src="@/assets/img/rightBrownDialog.png"
+        alt="icon"
+        class="h-[63px] absolute top-1/4 right-1/3"
       />
     </div>
     <Button
