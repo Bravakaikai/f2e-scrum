@@ -64,7 +64,9 @@ const done = () => {
           >
             <template #item="{ element }">
               <li class="flex cursor-move">
-                <span class="dragItem px-7 py-3"> {{ element.title }} </span>
+                <span class="dragItem px-7 py-3">
+                  {{ element.title }}
+                </span>
                 <div class="point">
                   {{ element.point }}
                 </div>

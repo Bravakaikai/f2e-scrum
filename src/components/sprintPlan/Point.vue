@@ -22,10 +22,10 @@ onMounted(() => {
   <div class="flex flex-col justify-center items-center">
     <ul class="mt-7">
       <li v-for="(item, index) in backlog" :key="item.id" class="flex">
-        <span class="dragItem px-7 py-3 cursor-default">
+        <span class="dragItem px-7 py-3">
           {{ item.title }}
         </span>
-        <div class="dragItem ml-[-1px] px-7 cursor-default">
+        <div class="dragItem ml-[-1px] px-7">
           <select
             v-model="backlog[index].point"
             class="h-full rounded-[10px] cursor-pointer outline-none"

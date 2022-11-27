@@ -41,13 +41,13 @@ const done = () => {
         <draggable v-model="backlog" group="backlog" item-key="id">
           <template #item="{ element }">
             <li class="relative flex h-[56px]">
-              <span class="dragItem px-7 py-3">
+              <span class="dragItem px-7 py-3 cursor-move">
                 {{ element.title }}
               </span>
               <img
                 src="@/assets/svg/productBacklog/bar.svg"
                 alt="icon"
-                class="dragItem ml-[-1px] p-2"
+                class="dragItem ml-[-1px] p-2 cursor-move"
               />
             </li>
           </template>
