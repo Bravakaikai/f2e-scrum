@@ -1,4 +1,4 @@
-export const roleList = ["bear", "frog", "rabbit"];
+export const roleList = ["frog", "bear", "rabbit"];
 
 export const roleRef = {
   bear:{
