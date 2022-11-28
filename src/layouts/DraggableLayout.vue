@@ -10,7 +10,7 @@ const getImageUrl = (type) => {
 </script>
 
 <template>
-  <div class="bg relative py-12 font-bold">
+  <div class="bg relative pt-12 pb-14 font-bold">
     <div class="relative z-10">
       <div class="flex-center">
         <img

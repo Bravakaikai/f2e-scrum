@@ -34,7 +34,7 @@ const checkList = ref([
     topic: "做得好的地方",
     items: [
       "這次我幫了很多人救火耶～",
-      "大家在開發上都會互相cover，讓任務都有準時在時間內完成。",
+      "大家在開發上都會互相 Cover，讓任務都有準時在時間內完成。",
     ],
     correct: 1,
     ans: null,
