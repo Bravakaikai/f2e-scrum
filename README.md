@@ -2,6 +2,11 @@
 
 透過遊戲的方式，讓使用者了解 Scrum 的流程與精神！
 
+# Demo
+
+- [Figma UI](https://www.figma.com/file/TqJsCQrLU4k4MRkZRg3R8a/Thef2e-Scrum%E6%96%B0%E6%89%8B%E6%9D%91-%E0%B8%85-%D5%9E%E2%80%A2%EF%BB%8C%E2%80%A2%D5%9E-%E0%B8%85?node-id=756%3A1639&t=AF2gIbkbMwXgKBxL-0)
+- [Demo](https://f2e-scrum-2hn90rrfr-bravakaikai.vercel.app/)
+
 # 系統說明
 
 專案運行方式
