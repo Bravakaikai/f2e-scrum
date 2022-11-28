@@ -11,10 +11,15 @@ const router = useRouter();
 
 const step = ref(0);
 const next = () => {
-  if (checkList.value[step.value].ans == null) {
+  const data = checkList.value[step.value];
+  if (data.ans == null) {
     alert("請選擇回饋");
     return;
+  } else if (data.ans != data.correct) {
+    alert("記得要正面表述呦~");
+    return;
   }
+
   if (step.value == checkList.value.length - 1) {
     router.push({ name: "end" });
     nextStep(10);
@@ -31,6 +36,7 @@ const checkList = ref([
       "這次我幫了很多人救火耶～",
       "大家在開發上都會互相cover，讓任務都有準時在時間內完成。",
     ],
+    correct: 1,
     ans: null,
   },
   {
@@ -39,15 +45,18 @@ const checkList = ref([
       "可以記錄這次的開發時間，讓預估隊點數可以更精準。",
       "開發時間預估不準確，請後端下次改進，避免 Delay 到我。",
     ],
+    correct: 0,
     ans: null,
   },
 ]);
 </script>
 
 <template>
-  <div class="bg relative pt-[112px] px-24 py-16 text-primary font-bold">
+  <div
+    class="bg relative pt-[112px] px-24 py-16 flex flex-col justify-center items-center text-primary font-bold"
+  >
     <Card
-      class="relative mx-auto py-10 pr-[60px] pl-[180px] w-4/5 min-w-[760px] text-primary"
+      class="relative mx-auto py-10 pr-[60px] pl-[180px] w-4/5 min-w-[760px] text-primary max-w-[1000px]"
     >
       <template #default>
         <HeadShot class="cardHeadShot shadow" role-type="rabbit" />
@@ -74,7 +83,7 @@ const checkList = ref([
         />
       </template>
     </Card>
-    <ul class="mt-12 mx-auto w-4/5">
+    <ul class="mt-12 mx-auto w-4/5 max-w-[1000px]">
       <li
         v-for="(item, index) in checkList[step].items"
         :key="index"

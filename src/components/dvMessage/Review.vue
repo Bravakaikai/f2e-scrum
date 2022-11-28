@@ -52,7 +52,7 @@ const done = () => {
       <Button class="ml-9 px-12 h-[52px]" title="完成" @click="done()" />
     </div>
     <div
-      class="relative mt-10 px-20 py-10 min-w-[920px] bg-[#f7f9f3] rounded-[60px]"
+      class="relative mt-10 px-20 py-10 w-[920px] bg-[#f7f9f3] rounded-[60px]"
     >
       <Selector
         type="dailyScrum"

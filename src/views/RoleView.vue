@@ -36,7 +36,7 @@ const nextPage = () => {
       :slidesPerView="3"
       :centeredSlides="true"
       :spaceBetween="10"
-      class="w-10/12"
+      class="w-10/12 max-w-[1300px]"
     >
       <swiper-slide
         v-for="(item, index) in roleList"
@@ -96,7 +96,7 @@ const nextPage = () => {
       />
     </swiper>
     <Button
-      class="absolute left-[50%] translate-x-[-50%] translate-y-[-50%] w-1/5 z-10"
+      class="absolute left-[50%] translate-x-[-50%] translate-y-[-50%] w-1/5 max-w-[300px] z-10"
       :title="currentIndex == 2 ? '拜會完畢' : '下面一位'"
       @click="currentIndex == 2 ? nextPage() : slideNext()"
     />
