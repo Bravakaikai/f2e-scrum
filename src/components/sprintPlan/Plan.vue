@@ -64,7 +64,7 @@ const done = () => {
           >
             <template #item="{ element }">
               <li class="flex cursor-move">
-                <span class="dragItem px-7 py-3">
+                <span class="dragItem px-6 py-3">
                   {{ element.title }}
                 </span>
                 <div class="point">
@@ -97,7 +97,7 @@ const done = () => {
           >
             <template #item="{ element }">
               <li class="flex cursor-move">
-                <span class="dragItem px-7 py-3"> {{ element.title }} </span>
+                <span class="dragItem px-6 py-3"> {{ element.title }} </span>
                 <div class="point">
                   {{ element.point }}
                 </div>
