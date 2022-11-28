@@ -31,7 +31,7 @@ const introList = [
 
 <template>
   <div
-    class="absolute top-0 px-20 w-screen h-[calc(100vh-113px)] flex flex-col justify-center items-center"
+    class="center w-screen min-w-[1380px] h-[calc(100vh-113px)] flex flex-col justify-center items-center"
   >
     <Card
       class="relative py-10 pr-[60px] pl-[172px] w-2/3 min-w-[850px] text-primary"
@@ -59,7 +59,7 @@ const introList = [
       <div
         v-for="(item, index) in introList"
         :key="index"
-        class="introCard relative p-10 border-[6px] border-solid border-yellow w-[332px] rounded-[30px] bg-white"
+        class="introCard relative px-8 pt-1 pb-5 border-[6px] border-solid border-yellow w-[332px] rounded-[30px] bg-white"
       >
         <div class="flex items-center border-b-2 border-solid border-yellow">
           <div
@@ -87,7 +87,7 @@ const introList = [
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-75%, -50%);
+  transform: translate(-80%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;

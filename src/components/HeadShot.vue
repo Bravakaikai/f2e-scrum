@@ -17,7 +17,6 @@ defineProps({
         frameborder="0"
         width="150%"
         height="150%"
-        class="cursor-pointer"
       />
     </div>
   </div>

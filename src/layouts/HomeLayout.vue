@@ -7,7 +7,7 @@ import Footer from "@/components/Footer.vue";
     <iframe
       src="https://my.spline.design/3dtextbluecopy-53a728fd223a810a8faa94eabbb7e829/"
       frameborder="0"
-      class="relative w-full h-full min-h-[760px]"
+      class="relative w-full h-full min-h-[calc(100vh-56px)]"
     />
     <slot class="z-10" />
     <Footer class="absolute bottom-0 z-10" />
