@@ -22,7 +22,7 @@ const change = () => {
   <div class="item px-4 w-[180px] h-[90px] bg-[#FBEDD3]">
     <select
       v-model="ans"
-      class="w-full h-full bg-transparent rounded-[80px] text-center cursor-pointer outline-none whitespace-normal"
+      class="w-full h-full bg-transparent text-center cursor-pointer outline-none whitespace-normal"
       style="word-wrap: break-word"
       @change="change"
     >

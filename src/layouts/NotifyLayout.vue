@@ -21,7 +21,9 @@ const router = useRouter();
 
 <template>
   <div class="bg relative py-16 font-bold">
-    <p class="mb-10 text-center text-secondary font-bold whitespace-pre-line">
+    <p
+      class="mb-10 text-lg text-center text-secondary font-bold whitespace-pre-line"
+    >
       {{ title }}
     </p>
     <div class="mx-auto w-2/3 h-[65vh] flex-center overflow-hidden">

@@ -38,7 +38,7 @@ const done = () => {
           />
           <p class="dot before:bg-[#7AB68F]">優先度低</p>
         </div>
-        <draggable v-model="backlog" group="backlog" item-key="id">
+        <draggable v-model="backlog" group="backlog" item-key="id" class="mx-5">
           <template #item="{ element }">
             <li class="relative flex h-[56px]">
               <span class="dragItem px-7 py-3 cursor-move">
@@ -52,7 +52,11 @@ const done = () => {
             </li>
           </template>
         </draggable>
-        <Button class="mt-auto ml-10 w-1/6" title="排好了" @click="done" />
+        <Button
+          class="mt-auto ml-10 w-1/6 max-w-[220px]"
+          title="排好了"
+          @click="done"
+        />
       </div>
       <div class="mt-10 mx-auto flex justify-center w-2/3">
         <img src="@/assets/svg/logo/Jira.svg" alt="Jira" />

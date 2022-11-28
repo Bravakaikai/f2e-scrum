@@ -60,7 +60,7 @@ const messageList = [
         <img
           src="@/assets/img/rightBlueDialog.png"
           alt="icon"
-          class="absolute rotateY left-[49%]"
+          class="absolute rotateY right-[344px]"
         />
       </div>
       <Card

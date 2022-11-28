@@ -27,7 +27,7 @@ const nextPage = () => {
 
 <template>
   <div class="bg relative py-16">
-    <p class="mb-6 text-center text-secondary font-bold">
+    <p class="mb-6 text-lg text-center text-secondary font-bold">
       進村的第一步，福福要先帶 {{ state.name }} 來拜碼頭<br />
       認錯職務可就是犯了大忌啦
     </p>
