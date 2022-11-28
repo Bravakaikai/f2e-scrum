@@ -27,7 +27,7 @@ const done = () => {
   >
     <template #default>
       <div
-        class="relative py-[60px] flex justify-center items-center border-b-2 border-solid border-secondary box-shadow"
+        class="relative py-[60px] flex-center border-b-2 border-solid border-secondary box-shadow"
       >
         <div class="flex flex-col justify-between">
           <p class="dot before:bg-warn">優先度高</p>

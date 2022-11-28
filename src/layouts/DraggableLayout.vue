@@ -12,7 +12,7 @@ const getImageUrl = (type) => {
 <template>
   <div class="bg relative py-12 font-bold">
     <div class="relative z-10">
-      <div class="flex items-center justify-center">
+      <div class="flex-center">
         <img
           :src="getImageUrl(type)"
           :alt="type == 'productBacklog' ? '產品待辦清單' : '短衝待辦清單'"

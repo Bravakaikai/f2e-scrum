@@ -30,25 +30,24 @@ const introList = [
 </script>
 
 <template>
-  <div
-    class="center w-screen min-w-[1380px] h-[calc(100vh-113px)] flex flex-col justify-center items-center"
-  >
+  <div class="center w-screen h-[calc(100vh-113px)] flex-center flex-col">
     <Card
-      class="relative py-10 pr-[60px] pl-[172px] w-2/3 min-w-[850px] text-primary"
+      class="relative py-10 pr-[60px] pl-[172px] w-1/3 min-w-[750px] text-primary"
     >
       <template #default>
         <HeadShot
           class="absolute top-[-6px] left-0 translate-x-[-45%] shadow"
         />
-        <div class="flex items-center">
+        <div class="relative flex items-center">
           <p>
             福福貼心幫你排序好專有名詞了
             <br />
-            若沒問題，請按下「接受挑戰」按鈕，迎接成功通過 Scrum
-            新手村的挑戰吧！
+            若沒問題，請按下「接受挑戰」按鈕，
+            <br />
+            迎接成功通過 Scrum 新手村的挑戰吧！
           </p>
           <Button
-            class="ml-6 w-[220px]"
+            class="absolute right-0 w-[180px]"
             title="接受挑戰"
             @click="emit('next')"
           />
@@ -59,11 +58,11 @@ const introList = [
       <div
         v-for="(item, index) in introList"
         :key="index"
-        class="introCard relative px-8 pt-1 pb-5 border-[6px] border-solid border-yellow w-[332px] rounded-[30px] bg-white"
+        class="introCard relative px-8 pt-1 pb-5 border-[6px] border-solid border-yellow w-[250px] rounded-[30px] bg-white"
       >
         <div class="flex items-center border-b-2 border-solid border-yellow">
           <div
-            class="mr-[10px] w-[44px] h-[44px] bg-yellow text-secondary rounded-full flex justify-center items-center text-2xl"
+            class="mr-[10px] w-[44px] h-[44px] flex-center bg-yellow text-secondary rounded-full text-2xl"
           >
             {{ index + 1 }}
           </div>

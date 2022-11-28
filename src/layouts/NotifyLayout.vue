@@ -24,9 +24,7 @@ const router = useRouter();
     <p class="mb-10 text-center text-secondary font-bold whitespace-pre-line">
       {{ title }}
     </p>
-    <div
-      class="mx-auto w-2/3 h-[65vh] overflow-hidden flex justify-center items-center"
-    >
+    <div class="mx-auto w-2/3 h-[65vh] flex-center overflow-hidden">
       <iframe
         :src="bgInfo[bgType]"
         frameborder="0"

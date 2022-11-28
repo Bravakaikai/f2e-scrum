@@ -27,7 +27,7 @@ const next = () => {
   <DraggableLayout
     type="sprintPlan"
     :title="`請把下方四項任務按照大致花費時間預估出點數，並且把加總 20 點的\n任務們加入至右邊Sprint Planning，完成一次短衝。`"
-    class="flex flex-col justify-center items-center font-bold"
+    class="flex-center flex-col font-bold"
   >
     <template #default>
       <p class="mt-16 text-xl text-secondary">

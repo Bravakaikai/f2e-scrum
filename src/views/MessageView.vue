@@ -42,45 +42,47 @@ const messageList = [
 </script>
 
 <template>
-  <div class="bg relative px-[258px] py-16 font-bold">
-    <div class="relative flex justify-end">
-      <HeadShot
-        v-for="(item, index) in messageList"
-        v-show="index != step"
-        :role-type="messageList[index].from"
-        :key="index"
-        class="ml-11 w-[150px] h-[150px] opacity-50"
-      />
-      <img
-        src="@/assets/img/rightSleepDialog.png"
-        alt="icon"
-        class="absolute right-0 translate-x-[100%]"
-      />
-      <img
-        src="@/assets/img/rightBlueDialog.png"
-        alt="icon"
-        class="absolute rotateY left-[49%]"
+  <div class="bg relative px-[258px] py-16 font-bold flex-center">
+    <div class="w-4/5 max-w-[1000px]">
+      <div class="relative flex justify-end w-4/5">
+        <HeadShot
+          v-for="(item, index) in messageList"
+          v-show="index != step"
+          :role-type="messageList[index].from"
+          :key="index"
+          class="ml-11 w-[150px] h-[150px] opacity-50"
+        />
+        <img
+          src="@/assets/img/rightSleepDialog.png"
+          alt="icon"
+          class="absolute right-0 translate-x-[100%]"
+        />
+        <img
+          src="@/assets/img/rightBlueDialog.png"
+          alt="icon"
+          class="absolute rotateY left-[49%]"
+        />
+      </div>
+      <Card
+        class="relative mx-auto mt-8 pt-20 pr-[72px] pb-[66px] pl-[198px] text-primary"
+      >
+        <template #default>
+          <HeadShot
+            class="cardHeadShot shadow"
+            :role-type="messageList[step].from"
+          />
+          <p class="whitespace-pre-line leading-9">
+            {{ messageList[step].message }}
+          </p>
+          <SendBy :name="messageList[step].name" />
+        </template>
+      </Card>
+      <Button
+        class="mx-auto mt-16 w-[228px] z-10"
+        :title="step == messageList.length - 1 ? '挑戰！' : '下一則'"
+        @click="next"
       />
     </div>
-    <Card
-      class="relative mx-auto mt-8 pt-20 pr-[72px] pb-[66px] pl-[198px] text-primary"
-    >
-      <template #default>
-        <HeadShot
-          class="cardHeadShot shadow"
-          :role-type="messageList[step].from"
-        />
-        <p class="whitespace-pre-line leading-9">
-          {{ messageList[step].message }}
-        </p>
-        <SendBy :name="messageList[step].name" />
-      </template>
-    </Card>
-    <Button
-      class="mx-auto mt-16 w-[228px] z-10"
-      :title="step == messageList.length - 1 ? '挑戰！' : '下一則'"
-      @click="next"
-    />
   </div>
 </template>
 

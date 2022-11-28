@@ -53,7 +53,7 @@ const checkList = ref([
 
 <template>
   <div
-    class="bg relative pt-[112px] px-24 py-16 flex flex-col justify-center items-center text-primary font-bold"
+    class="bg relative pt-[112px] px-24 py-16 flex-center flex-col text-primary font-bold"
   >
     <Card
       class="relative mx-auto py-10 pr-[60px] pl-[180px] w-4/5 min-w-[760px] text-primary max-w-[1000px]"

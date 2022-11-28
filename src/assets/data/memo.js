@@ -5,12 +5,12 @@ export const introTopicList = [
     url: "dailyScrum",
   },
   {
-    topic: "短衡檢視會議",
+    topic: "短衝檢視會議",
     en: "Sprint Review",
     url: "sprintReview",
   },
   {
-    topic: "短衡自省會議",
+    topic: "短衝自省會議",
     en: "Sprint Retrospective ",
     url: "sprintRetrospective",
   },

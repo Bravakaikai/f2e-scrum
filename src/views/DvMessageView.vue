@@ -14,7 +14,7 @@ const next = () => {
 
 <template>
   <div
-    class="bg relative py-16 flex flex-col justify-center items-center text-primary font-bold leading-9"
+    class="bg relative py-16 flex-center flex-col text-primary font-bold leading-9"
   >
     <Intro v-if="step == 1" @next="next" class="w-4/5 max-w-[1000px]" />
     <Review v-else-if="step == 2" class="w-4/5 max-w-[1000px]" />

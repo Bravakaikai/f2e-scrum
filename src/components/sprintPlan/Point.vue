@@ -19,7 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col justify-center items-center">
+  <div class="flex-center flex-col">
     <ul class="mt-7">
       <li v-for="(item, index) in backlog" :key="item.id" class="flex">
         <span class="dragItem px-7 py-3">
