@@ -36,7 +36,7 @@ const done = () => {
       <Card class="relative py-10 pr-[60px] pl-[180px] w-3/4 text-primary">
         <template #default>
           <HeadShot
-            class="absolute top-[-6px] left-0 translate-x-[-25%] shadow"
+            class="absolute top-[-6px] left-[-6px] translate-x-[-25%] shadow"
             role-type="rabbit"
           />
           <div>

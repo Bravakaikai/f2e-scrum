@@ -30,7 +30,7 @@ const next = () => {
     class="flex-center flex-col font-bold"
   >
     <template #default>
-      <p class="mt-16 text-xl text-secondary">
+      <p class="mt-9 text-xl text-secondary text-center">
         STEP {{ step }}. {{ stepInfo[step - 1].title }}
         <br />
         <span class="text-base font-medium">

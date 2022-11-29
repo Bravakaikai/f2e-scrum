@@ -44,7 +44,7 @@ const messageList = [
 <template>
   <div class="bg relative px-[258px] py-16 font-bold flex-center">
     <div class="w-4/5 max-w-[1000px]">
-      <div class="relative flex justify-end w-4/5">
+      <div class="relative flex justify-end w-4/5 right-[-15%]">
         <HeadShot
           v-for="(item, index) in messageList"
           v-show="index != step"
@@ -63,22 +63,24 @@ const messageList = [
           class="absolute rotateY right-[344px]"
         />
       </div>
-      <Card
-        class="relative mx-auto mt-8 pt-20 pr-[72px] pb-[66px] pl-[198px] text-primary"
-      >
-        <template #default>
-          <HeadShot
-            class="cardHeadShot shadow"
-            :role-type="messageList[step].from"
-          />
-          <p class="whitespace-pre-line leading-9">
-            {{ messageList[step].message }}
-          </p>
-          <SendBy :name="messageList[step].name" />
-        </template>
-      </Card>
+      <div class="h-[406px]">
+        <Card
+          class="relative mx-auto mt-8 pt-20 pr-[72px] pb-[66px] pl-[198px] text-primary"
+        >
+          <template #default>
+            <HeadShot
+              class="cardHeadShot shadow"
+              :role-type="messageList[step].from"
+            />
+            <p class="whitespace-pre-line leading-9">
+              {{ messageList[step].message }}
+            </p>
+            <SendBy :name="messageList[step].name" />
+          </template>
+        </Card>
+      </div>
       <Button
-        class="mx-auto mt-16 w-[228px] z-10"
+        class="mx-auto mt-2 w-[228px] z-10"
         :title="step == messageList.length - 1 ? '挑戰！' : '下一則'"
         @click="next"
       />

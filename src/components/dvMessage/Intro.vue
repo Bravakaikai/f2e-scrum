@@ -42,34 +42,36 @@ const messageList = [
 
 <template>
   <div class="text-lg">
-    <Card class="relative mx-auto mt-8 py-10 pr-[56px] pl-[198px]">
-      <template #default>
-        <HeadShot class="cardHeadShot shadow" role-Type="rabbit" />
-        <div v-show="step > 0" class="flex items-center mb-11">
-          <img
-            :src="getImageUrl(introTopicList[step - 1]?.url)"
-            :alt="introTopicList[step - 1]?.topic"
-            class="h-[60px]"
-          />
-          <img
-            v-if="step == 1"
-            src="@/assets/svg/dvMessage/time.svg"
-            alt="每天15分鐘"
-            class="ml-8 h-10"
-          />
-          <img
-            v-else-if="step == 3"
-            src="@/assets/svg/dvMessage/tool.svg"
-            alt="Confluence"
-            class="absolute top-0 right-[-20px] translate-y-[-70%]"
-          />
-        </div>
-        <p class="whitespace-pre-line leading-9">
-          {{ messageList[step] }}
-        </p>
-        <SendBy name="Development Team , GINA" />
-      </template>
-    </Card>
+    <div class="h-[412px]">
+      <Card class="relative mx-auto mt-8 py-10 pr-[56px] pl-[198px]">
+        <template #default>
+          <HeadShot class="cardHeadShot shadow" role-Type="rabbit" />
+          <div v-show="step > 0" class="flex items-center mb-11">
+            <img
+              :src="getImageUrl(introTopicList[step - 1]?.url)"
+              :alt="introTopicList[step - 1]?.topic"
+              class="h-[60px]"
+            />
+            <img
+              v-if="step == 1"
+              src="@/assets/svg/dvMessage/time.svg"
+              alt="每天15分鐘"
+              class="ml-8 h-10"
+            />
+            <img
+              v-else-if="step == 3"
+              src="@/assets/svg/dvMessage/tool.svg"
+              alt="Confluence"
+              class="absolute top-0 right-[-20px] translate-y-[-70%]"
+            />
+          </div>
+          <p class="whitespace-pre-line leading-9">
+            {{ messageList[step] }}
+          </p>
+          <SendBy name="Development Team , GINA" />
+        </template>
+      </Card>
+    </div>
     <div class="my-[52px] flex justify-between">
       <div
         v-for="(item, index) in introTopicList"

@@ -11,6 +11,10 @@ const router = useRouter();
 const limit = 20;
 const backlog = ref([]);
 const sprintPlan = ref([]);
+const dragOptions = {
+  animation: 200,
+  ghostClass: "ghost",
+};
 
 const pointValidate = () => {
   return currentPoints() <= limit;
@@ -46,7 +50,7 @@ const done = () => {
 </script>
 
 <template>
-  <div class="mt-4 flex justify-between">
+  <div class="mt-7 flex justify-between">
     <Block type="Product Backlog">
       <template #default>
         <div class="relative height">
@@ -57,6 +61,7 @@ const done = () => {
             class="absolute top-0 right-0 bottom-0 left-0 m-auto"
           />
           <draggable
+            v-bind="dragOptions"
             :list="backlog"
             group="sprintPlan"
             item-key="id"
@@ -90,6 +95,7 @@ const done = () => {
             class="absolute top-0 right-0 bottom-0 left-0 m-auto"
           />
           <draggable
+            v-bind="dragOptions"
             :list="sprintPlan"
             group="sprintPlan"
             item-key="id"

@@ -31,4 +31,6 @@ iframe {
 .cardHeadShot {
   @apply absolute top-[-50px] left-[-50px];
 }
-
+.ghost {
+  opacity: 0.5;
+}

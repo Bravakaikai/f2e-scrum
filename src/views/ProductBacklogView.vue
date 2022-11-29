@@ -8,6 +8,10 @@ import Button from "@/components/Button.vue";
 const { state, setBacklog, nextStep } = inject("store");
 const router = useRouter();
 const backlog = ref([]);
+const dragOptions = {
+  animation: 200,
+  ghostClass: "ghost",
+};
 
 onMounted(() => {
   backlog.value = state.backlog;
@@ -27,7 +31,7 @@ const done = () => {
   >
     <template #default>
       <div
-        class="relative py-[60px] flex-center border-b-2 border-solid border-secondary box-shadow"
+        class="relative py-[48px] flex-center border-b-2 border-solid border-secondary box-shadow"
       >
         <div class="flex flex-col justify-between">
           <p class="dot before:bg-warn">優先度高</p>
@@ -38,7 +42,13 @@ const done = () => {
           />
           <p class="dot before:bg-[#7AB68F]">優先度低</p>
         </div>
-        <draggable v-model="backlog" group="backlog" item-key="id" class="mx-5">
+        <draggable
+          v-model="backlog"
+          v-bind="dragOptions"
+          group="backlog"
+          item-key="id"
+          class="mx-5"
+        >
           <template #item="{ element }">
             <li class="relative flex h-[56px]">
               <span class="dragItem px-7 py-3 cursor-move">

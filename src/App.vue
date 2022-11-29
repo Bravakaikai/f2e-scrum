@@ -24,5 +24,5 @@ onMounted(() => {
 
 <template>
   <ProgressBar class="min-w-[1380px]" />
-  <router-view class="min-w-[1380px] min-h-[790px]" />
+  <router-view class="min-w-[1380px] min-h-[760px]" />
 </template>

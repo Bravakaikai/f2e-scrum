@@ -25,7 +25,7 @@ onMounted(() => {
         <span class="dragItem px-7 py-3">
           {{ item.title }}
         </span>
-        <div class="dragItem ml-[-1px] px-7">
+        <div class="dragItem ml-[-1px] px-5">
           <select
             v-model="backlog[index].point"
             class="h-full rounded-[10px] cursor-pointer outline-none"

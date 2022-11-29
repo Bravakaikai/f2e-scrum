@@ -37,12 +37,12 @@ const goHome = () => {
           <img
             src="@/assets/svg/end/achievement.svg"
             alt="achievement"
-            class="absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%]"
+            class="absolute top-0 left-0 translate-x-[-50%] translate-y-[-30%]"
           />
           <img
             src="@/assets/svg/end/achievement2.svg"
             alt="achievement"
-            class="absolute bottom-0 right-0 translate-x-[50%] translate-y-[50%]"
+            class="absolute bottom-0 right-0 translate-x-[50%] translate-y-[30%]"
           />
           <Button
             class="inline-block px-12 absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-[50%]"

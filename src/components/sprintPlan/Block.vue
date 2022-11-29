@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-  <Card class="relative pb-9 w-[520px] text-primary">
+  <Card class="relative pb-9 w-[552px] h-[560px] text-primary">
     <template #default>
       <div
         class="mt-[-4px] mx-[-4px] py-5 rounded-t-[60px] text-white text-center text-xl"
